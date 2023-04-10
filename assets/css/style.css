@@ -349,7 +349,7 @@ a {
 /* ---------HERO---------- */
 
 .hero {
-    max-height: 500px;
+    height: 500px;
 
 }
 
@@ -392,6 +392,7 @@ a {
     background: var(--primary-color);
     padding: 10px 13px;
     margin-top: 25px;
+    border-radius: 5px;
 }
 
 .hero .hero-desc {
@@ -401,3 +402,84 @@ a {
 }
 
 /* ----------DISCOUNT------------- */
+
+/* common */
+.disc-container .main-content {
+    display: grid;
+    gap: 30px;
+    padding-top: 60px;
+    grid-template-columns: 500px 350px 350px;
+    grid-template-rows: 300px 300px;
+
+}
+
+.disc-container .disc-item1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.disc-item4 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.disc-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.disc-container .disc-info {
+    position: absolute;
+    z-index: 1;
+
+}
+
+.disc-img {
+    position: relative;
+}
+
+.disc-info .intro {
+    font-size: 1.5rem;
+    color: var(--primary-text-color);
+    margin-top: 20px;
+}
+
+.disc-info .title {
+    margin-top: 16px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.disc-info .desc {
+    margin-top: 16px;
+    color: var(--primary-text-color);
+    font-size: 1.3rem;
+}
+
+.disc-info .desc i {
+    color: var(--primary-color);
+}
+
+/* Item 1 */
+
+.disc-item1 .disc-info {
+    left: 207px;
+    bottom: -120px;
+}
+
+.disc-item2 .disc-info {
+    left: 736px;
+    bottom: -120px;
+}
+
+.disc-item3 .disc-info {
+    right: 260px;
+    bottom: -120px;
+}
+
+.disc-item4 .disc-info {
+    right: 680px;
+    top: 1050px;
+}
