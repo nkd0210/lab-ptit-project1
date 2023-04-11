@@ -504,7 +504,7 @@ a {
 
 .intro-product .intro-title {
     font-size: 2.4rem;
-    font-weight: bold;
+    font-weight: 650;
     padding-bottom: 20px;
 }
 
@@ -519,7 +519,7 @@ a {
 .intro-product ul li a {
     color: black;
     font-size: 1.3rem;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .intro-product ul li:first-of-type a {
@@ -575,7 +575,7 @@ a {
 .product .product-info .title {
     margin-top: 10px;
     font-size: 1.4rem;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
 }
 
@@ -584,6 +584,10 @@ a {
     color: var(--primary-text-color);
     font-size: 1.4rem;
     cursor: pointer;
+}
+
+.product .product-info .desc .line {
+    text-decoration: line-through;
 }
 
 .product .product-info .star {
@@ -636,5 +640,147 @@ a {
     background: var(--primary-color);
 }
 
+/* -------DEALS-------- */
+
+.deals .main-content {
+    height: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.deals .main-content .deal-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
+.deals .deal-info {
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    left: 40px;
+}
+
+.deals .deal-info .intro {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.deals .deal-info .title {
+    font-size: 2.5rem;
+    font-weight: 650;
+    margin-bottom: 20px;
+}
+
+.deals .deal-info .desc {
+    color: var(--primary-text-color);
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.deals .deal-info .time {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.deals .deal-info .time .day {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    height: 70px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-right: 25px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.deal-info .day .number {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.deals .deal-info .time .hour {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    height: 70px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-right: 25px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.deal-info .hour .number {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+
+}
+
+.deals .deal-info .time .min {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    height: 70px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-right: 25px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.deal-info .min .number {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.deals .deal-info .time .sec {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    height: 70px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-right: 25px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.deal-info .sec .number {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.deals .deal-info .btn {
+    display: inline-block;
+    display: flex;justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    background: var(--primary-color);
+    font-size: 1.6rem;
+}
+
+.deals .deal-info .btn i {
+    padding-left: 10px;
+}
