@@ -402,84 +402,239 @@ a {
 }
 
 /* ----------DISCOUNT------------- */
+.disc-container {
+    padding: 50px 0px;
+}
 
-/* common */
 .disc-container .main-content {
     display: grid;
-    gap: 30px;
-    padding-top: 60px;
-    grid-template-columns: 500px 350px 350px;
+    grid-template-columns: 4fr 3fr 3fr;
     grid-template-rows: 300px 300px;
-
+    grid-template-areas:
+        "men women1 women 2"
+        "men bag ";
+    gap: 20px;
 }
 
-.disc-container .disc-item1 {
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-
-.disc-item4 {
-    grid-column-start: 2;
-    grid-column-end: 4;
-}
-
-.disc-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.disc-container .disc-info {
-    position: absolute;
-    z-index: 1;
-
-}
-
-.disc-img {
-    position: relative;
-}
-
-.disc-info .intro {
+.disc-container .disc-item .disc-intro {
+    color: var(--primary-text-color);
+    margin-bottom: 8px;
     font-size: 1.5rem;
-    color: var(--primary-text-color);
-    margin-top: 20px;
 }
 
-.disc-info .title {
-    margin-top: 16px;
-    font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 1.5;
+.disc-container .disc-item .disc-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    line-height: 25px;
+    margin-bottom: 10px;
 }
 
-.disc-info .desc {
-    margin-top: 16px;
+
+.disc-container .disc-item .disc-desc {
+    display: inline-block;
     color: var(--primary-text-color);
+    cursor: pointer;
     font-size: 1.3rem;
 }
 
-.disc-info .desc i {
+.disc-container .disc-item .disc-desc:hover {
+    opacity: 0.9;
+    color: black;
+}
+
+.disc-container .disc-item .disc-desc i {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+.disc-container .disc-item .disc-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.disc-container .disc-item .disc-info {
+    position: absolute;
+    z-index: 1;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.disc-container .disc-item1 {
+    grid-area: 'men';
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}
+
+.disc-container .disc-item2 {
+    grid-area: 'women1';
+}
+
+.disc-container .disc-item3 {
+    grid-area: 'women2';
+}
+
+.disc-container .disc-item4 {
+    grid-area: 'bag';
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+/* PRODUCTS */
+
+.intro-product {
+    width: 100%;
+    height: 200px;
+}
+
+.intro-product .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: lightblue; */
+    padding: 30px 0px 40px 0px;
+}
+
+.intro-product .intro-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.intro-product .list-product ul {
+    display: flex;
+}
+
+.intro-product ul li:nth-child(2) {
+    padding: 0px 30px;
+}
+
+.intro-product ul li a {
+    color: black;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.intro-product ul li:first-of-type a {
     color: var(--primary-color);
 }
 
-/* Item 1 */
-
-.disc-item1 .disc-info {
-    left: 207px;
-    bottom: -120px;
+.intro-product .intro-img {
+    width: 150px;
+    padding-bottom: 15px;
 }
 
-.disc-item2 .disc-info {
-    left: 736px;
-    bottom: -120px;
+/* List Product */
+
+.list-product .main-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 500px 500px;
+    gap: 15px;
+
 }
 
-.disc-item3 .disc-info {
-    right: 260px;
-    bottom: -120px;
+.list-product .product .list-img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
 }
 
-.disc-item4 .disc-info {
-    right: 680px;
-    top: 1050px;
+.list-product .product {
+    display: block;
+    position: relative;
 }
+
+.product .sale {
+    position: absolute;
+    z-index: 1;
+    top: 22px;
+    left: 18px;
+    color: #fff;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 4px 4px;
+    border-radius: 5px 0px;
+}
+
+.product .product-info .intro {
+    margin-top: 10px;
+    color: var(--primary-text-color);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.product .product-info .title {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.product .product-info .desc {
+    margin-top: 10px;
+    color: var(--primary-text-color);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.product .product-info .star {
+    color: #FFC926;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.product .icon {
+    display: flex;
+    margin-top: 15px;
+    color: var(--primary-text-color);
+}
+
+.product .icon .add {
+    display: flex;
+    border: 0.5px solid var(--primary-text-color);
+    font-size: 1.3rem;
+    padding: 8px;
+    text-align: center;
+}
+
+.product .icon .add:hover {
+    color: var(--primary-text-color);
+    cursor: pointer;
+    background: var(--primary-color);
+}
+
+.product .icon .heart {
+    margin-left: 8px;
+    border: 0.5px solid var(--primary-text-color);
+    padding: 8px;
+}
+
+.product .icon .heart:hover {
+    color: var(--primary-text-color);
+    cursor: pointer;
+    background: var(--primary-color);
+}
+
+.product .icon .eyes {
+    margin-left: 8px;
+    border: 0.5px solid var(--primary-text-color);
+    padding: 8px;
+}
+
+.product .icon .eyes:hover {
+    color: var(--primary-text-color);
+    cursor: pointer;
+    background: var(--primary-color);
+}
+
+
+
