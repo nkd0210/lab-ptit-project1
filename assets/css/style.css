@@ -36,6 +36,17 @@ a {
 
 
 /* ---------HEADER------------- */
+
+@media  only screen and (max-width: 800px) {
+    .settings-res {
+        display: none;
+    }
+    .nav-head-res {
+        display: flex !important;
+        justify-content: center !important;
+    }
+}
+
 .header {
     background-color: #EE2761;
 }
@@ -149,6 +160,16 @@ a {
 
 /* BODY-SEARCHING */
 
+@media only screen and (max-width: 800px) {
+    .searching-res {
+        display: none !important;
+    }
+
+    .wish-res {
+        display: none ;
+    }
+    
+}
 .body-info .searching {
     display: flex;
     align-items: center;
@@ -288,6 +309,11 @@ a {
 }
 
 /* ---------BODY-NAVIGATION------------- */
+@media only screen and (max-width: 800px) {
+    .nav-res {
+        display: none !important;
+    }
+}
 
 .body-header .body-nav {
     display: flex;
@@ -347,6 +373,15 @@ a {
 }
 
 /* ---------HERO---------- */
+@media only screen and (max-width: 800px) {
+    .hero-img-res {
+        width: 800px !important;
+    }
+
+    .hero-info-res {
+        left: 0px !important;
+    }
+}
 
 .hero {
     height: 500px;
@@ -409,6 +444,16 @@ a {
 /* ----------DISCOUNT------------- */
 .disc-container {
     padding: 50px 0px;
+}
+
+@media only screen and (max-width:800px) {
+    .container-areas {
+        grid-template-areas: 
+        "women1 women2"
+        "bag bag"
+        "men men"
+        "men men" !important;
+    }
 }
 
 .disc-container .main-content {
@@ -1355,3 +1400,22 @@ a {
     text-align: center;
 }
 
+/* SCRIPT */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #EE2761;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    animation: modalFadeIn ease 3s;
+}

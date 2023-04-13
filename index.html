@@ -29,7 +29,7 @@
         <header class="header">
             <div class="main-content">
                 <!-- NAV-HEAD -->
-                <div class="nav-head">
+                <div class="nav-head nav-head-res">
                     <div class="introduce">
                         <ul>
                             <li>
@@ -45,7 +45,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="settings">
+                    <div class="settings settings-res">
                         <ul>
                             <li class="active">
                                 <p>English</p>
@@ -64,15 +64,15 @@
         <!-- BODY -->
         <div class="body-header">
             <!-- INFO-BODY-HEADER -->
-            <div class="body-info">
-                <div class="main-content">
+            <div class="body-info ">
+                <div class="main-content body-info-res">
                     <!-- LOGO -->
-                    <div class="logo">
+                    <div class="logo ">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <h2 class="logo-title">SURUCHI</h2>
                     </div>
                     <!-- SEARCHING -->
-                    <div class="searching">
+                    <div class="searching searching-res">
                         <div class="all">
                             <p>All Categories</p>
                             <i class="fa-solid fa-angle-down"></i>
@@ -91,8 +91,8 @@
                             <i class="fa-regular fa-user"></i>
                             <p>My Account</p>
                         </div>
-                        <div class="wish">
-                            <div class="noti-wish">
+                        <div class="wish wish-res">
+                            <div class="noti-wish ">
                                 <i class="fa-regular fa-heart"></i>
                                 <span class="badge">02</span>
                             </div>
@@ -110,7 +110,7 @@
             </div>
 
             <!-- BODY-NAVIGATION -->
-            <div class="body-nav">
+            <div class="body-nav nav-res">
                 <div class="main-content">
                     <!-- NAV-LIST -->
                     <div class="nav-list">
@@ -178,8 +178,8 @@
 
         <!-- HERO -->
         <div class="hero">
-            <img src="./assets/img/hero-img.jpg" alt="The Great Fashion Collection 2022" class="hero-img">
-            <div class="hero-info">
+            <img src="./assets/img/hero-img.jpg" alt="The Great Fashion Collection 2022" class="hero-img hero-img-res">
+            <div class="hero-info hero-info-res">
                 <div class="hero-intro">
                     New Collection
                 </div>
@@ -197,7 +197,7 @@
         </div>
 
         <!-- Discount -->
-        <div class="disc-container">
+        <div class="disc-container container-areas ">
             <div class="main-content">
                 <!-- ITEM1 -->
                 <div class=" disc-item disc-item1">
@@ -1085,6 +1085,30 @@
             </div>
         </div>
 
+        <button onclick="topFunction()" id="myBtn" title="Go to top" class="MyBtn">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+        <script>
+            // Get the button:
+            let mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            } 
+        </script>
     </main>
 </body>
 
